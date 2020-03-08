@@ -1,4 +1,4 @@
-# eznetstat: A command line application with netstat shortcuts
+# eznet-cli: A command line application with netstat shortcuts
 
 Have you ever needed to remember how to check what process is on a port and forgotten how to do it? There are loads of netstat commands that can be tricky to remember. This is a work in progress command line application to give direct shortcuts to those netstat operations.
 
