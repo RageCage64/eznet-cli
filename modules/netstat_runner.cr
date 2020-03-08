@@ -1,7 +1,7 @@
 module NetstatRunner
-  def self.run_ltnp() 
+  def self.run_ltnp() : LtnpOperator
 	io = IO::Memory.new
-	Process.run("netstat -ltnp", shell: true, output: io)
-	io.to_s
+	Process.run("sudo netstat -ltnp", shell: true, output: io)
+	LtnpOperator.new io.to_s
   end
 end
