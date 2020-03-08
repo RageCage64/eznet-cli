@@ -15,6 +15,7 @@ Get the name and process ID of the process running on a given port
 
 ## TODO
 * Add the ability to kill process on port
+* Maybe look into other cli operations? (getting IP?)
 * Come up with other useful stuff
 * Write up contributors guide
 * Decide how to do documentation (probably Github wiki?)

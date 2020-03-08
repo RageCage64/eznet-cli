@@ -1,0 +1,13 @@
+name: eznet-cli
+version: 0.0.1
+
+authors:
+  - BraydonKains <kainsbraydon@gmail.com>
+
+targets:
+  eznet-cli:
+    eznet: ./main.cr
+
+crystal: 0.33.0
+
+license: MIT
