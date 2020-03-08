@@ -1,0 +1,8 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:8081          0.0.0.0:*               LISTEN      166475/polymer      
+tcp        0      0 0.0.0.0:57621           0.0.0.0:*               LISTEN      163077/spotify --fo 
+tcp        0      0 192.168.122.1:53        0.0.0.0:*               LISTEN      1286/dnsmasq        
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      35841/sshd          
+tcp        0      0 0.0.0.0:53323           0.0.0.0:*               LISTEN      163077/spotify --fo 
+tcp6       0      0 :::22                   :::*                    LISTEN      35841/sshd          
