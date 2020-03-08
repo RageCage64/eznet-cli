@@ -1,2 +1,9 @@
+# vim files
 *.swp
-eznet
+
+# stuff from crystal init
+/docs/
+/lib/
+/bin/
+/.shards/
+*.dwarf
