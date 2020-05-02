@@ -20,7 +20,7 @@ OptionParser.parse do |parser|
     record = ltnp_operator.get_port_record port
 
     unless record.nil?
-      puts "Port: %s, Process: %s" % [record.port, record.p_name]
+      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
     else
       puts "No processes found on port %s" % port
     end
@@ -33,7 +33,7 @@ OptionParser.parse do |parser|
     record = ltnp_operator.get_port_record port
 
     unless record.nil?
-      puts "Port: %s, Process: %s" % [record.port, record.p_name]
+      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
       puts "Would you like to kill %s? (y/n)" % [record.p_name]
       input = gets
       unless input.nil?
