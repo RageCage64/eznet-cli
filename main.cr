@@ -1,6 +1,6 @@
 require "option_parser"
 require "./ltnp/ltnp_operator"
-require "./modules/netstat_runner"
+require "./modules/command_runner"
 
 OptionParser.parse do |parser|
   parser.banner = "Welcome to eznetstat!"
@@ -16,19 +16,35 @@ OptionParser.parse do |parser|
   end
 
   parser.on "-c PORT", "--check-port=PORT", "Get the process name and ID of process on port" do |port|
-    ltnp_operator = NetstatRunner.run_ltnp
+    ltnp_operator = CommandRunner.run_ltnp
     record = ltnp_operator.get_port_record port
+
     unless record.nil?
-      puts "Port: %s, Process: %s" % [record.port, record.p_name]
+      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
     else
       puts "No processes found on port %s" % port
     end
+
     exit
   end
 
-  parser.on "-k", "--kill-port", "Kill process on port" do
-    ltnp_operator = NetstatRunner.run_ltnp
-    ltnp_operator.say_hi
+  parser.on "-k PORT", "--kill-port=PORT", "Kill process on port" do |port|
+    ltnp_operator = CommandRunner.run_ltnp
+    record = ltnp_operator.get_port_record port
+
+    unless record.nil?
+      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
+      puts "Would you like to kill %s? (y/n)" % [record.p_name]
+      input = gets
+      unless input.nil?
+        if input.downcase == "y"
+          CommandRunner.run_kill record.pid
+        end
+      end
+    else
+      puts "No processes found on port %s" % port
+    end
+
     exit
   end
 end

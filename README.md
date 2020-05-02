@@ -13,16 +13,18 @@ Show help menu.
 ### -c PORT, --check-port=PORT
 Get the name and process ID of the process running on a given port
 
+### -k PORT, --kill-port=PORT
+Check the process running on a given port with the option to kill it if you'd like.
+
 ## TODO
-- [] Add the ability to kill process on port
-- [] Maybe look into other cli operations? (getting IP?)
-- [] Come up with other useful stuff
-- [] Write up contributors guide
-- [] Decide how to do documentation (probably Github wiki?)
-- [] Write man page (figure out how to do that lol)
-- [] Figure out distribution/release
-	
-- [x] Set up CI (probably Travis)
+* [x] Add the ability to kill process on port
+* [] Maybe look into other cli operations? (getting IP?)
+* [] Come up with other useful stuff
+* [] Write up contributors guide
+* [] Decide how to do documentation (probably Github wiki?)
+* [] Write man page (figure out how to do that lol)
+* [] Figure out distribution/release
+* [x] Set up CI (probably Travis)
 
 ## Contributing
 I don't know that I'm ready for contributors yet because I don't have a good contributors guide. I do plan to eventually open this up to contributors. If you have any ideas for future operations, please feel free to open an issue, I am happy to discuss ideas!
