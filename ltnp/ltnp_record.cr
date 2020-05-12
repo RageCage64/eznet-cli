@@ -27,6 +27,10 @@ class LtnpRecord
     ]
   end
 
+  def out_s
+    "Port: %s, Process: %s, Process ID: %s" % [self.port, self.p_name, self.pid]
+  end
+
   def ser_address_port(address_port : Array) : {String, String}
     address = String.new
     port = String.new

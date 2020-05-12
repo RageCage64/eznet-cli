@@ -16,4 +16,17 @@ describe LtnpOperator do
       sut.get_port_record(nonsense_port).nil?.should be_true
     end
   end
+
+  describe "#search_p_name" do
+    existing_p_name = "polymer"
+    nonsense_p_name = "thisisnotathing"
+
+    it "should find record when process exists" do
+      sut.search_p_name(existing_p_name).nil?.should be_false
+    end
+
+    it "should not find record when process doesn't exist" do
+      sut.search_p_name(existing_p_name).nil?.should be_false
+    end
+  end
 end

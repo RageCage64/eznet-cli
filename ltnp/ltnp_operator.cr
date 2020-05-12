@@ -15,4 +15,8 @@ class LtnpOperator
   def get_port_record(port : String) : LtnpRecord | Nil
     @ltnp_records.find { |r| r.port == port }
   end
+
+  def search_p_name(p_name : String) : LtnpRecord | Nil
+    @ltnp_records.find { |r| r.p_name == p_name }
+  end
 end
