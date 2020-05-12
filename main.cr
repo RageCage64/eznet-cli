@@ -20,9 +20,22 @@ OptionParser.parse do |parser|
     record = ltnp_operator.get_port_record port
 
     unless record.nil?
-      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
+      puts record.out_s
     else
       puts "No processes found on port %s" % port
+    end
+
+    exit
+  end
+
+  parser.on "-p PNAME", "--find-process=PNAME", "Find the port and ID of a process by name" do |p_name|
+    ltnp_operator = CommandRunner.run_ltnp
+    record = ltnp_operator.search_p_name p_name
+
+    unless record.nil?
+      puts record.out_s
+    else
+      puts "No process found by the name %s" % p_name
     end
 
     exit
@@ -33,7 +46,7 @@ OptionParser.parse do |parser|
     record = ltnp_operator.get_port_record port
 
     unless record.nil?
-      puts "Port: %s, Process: %s, Process ID: %s" % [record.port, record.p_name, record.pid]
+      puts record.out_s
       puts "Would you like to kill %s? (y/n)" % [record.p_name]
       input = gets
       unless input.nil?
