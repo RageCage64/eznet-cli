@@ -26,7 +26,7 @@ describe LtnpOperator do
     end
 
     it "should not find record when process doesn't exist" do
-      sut.search_p_name(existing_p_name).nil?.should be_false
+      sut.search_p_name(nonsense_p_name).nil?.should be_true
     end
   end
 end

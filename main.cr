@@ -37,6 +37,8 @@ OptionParser.parse do |parser|
     else
       puts "No process found by the name %s" % p_name
     end
+
+    exit
   end
 
   parser.on "-k PORT", "--kill-port=PORT", "Kill process on port" do |port|
