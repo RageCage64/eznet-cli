@@ -26,7 +26,7 @@ class LtnpOperator
     @ltnp_records.find { |r| r.p_name == p_name }
   end
 
-  #Actions
+  # Actions
 
   # -c, --check-port
   def check_port(port : String) : String
