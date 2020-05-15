@@ -22,8 +22,8 @@ class LtnpOperator
     @ltnp_records.find { |r| r.port == port }
   end
 
-  def search_p_name(p_name : String) : LtnpRecord | Nil
-    @ltnp_records.find { |r| r.p_name == p_name }
+  def search_p_name(p_name : String) : Array(LtnpRecord)
+    @ltnp_records.select { |r| r.p_name.includes?(p_name) }
   end
 
   # Actions
@@ -43,12 +43,12 @@ class LtnpOperator
 
   # -p, --find-process
   def find_process(p_name : String)
-    record = search_p_name p_name
+    records = search_p_name p_name
 
-    unless record.nil?
-      result = record.output_s
+    unless records.empty?
+      result = records.map { |record| record.output_s }.join("\n")
     else
-      result = "No process found by the name %s" % p_name
+      result = "No processes found that match the name %s" % p_name
     end
 
     result
