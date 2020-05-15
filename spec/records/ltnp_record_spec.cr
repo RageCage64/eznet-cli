@@ -1,5 +1,5 @@
 require "spec"
-require "../../../records/ltnp_record.cr"
+require "../../records/ltnp_record.cr"
 
 describe LtnpRecord do
   sut_normal = LtnpRecord.new "tcp        0      0 127.0.0.1:8081          0.0.0.0:*               LISTEN      69/myproc"

@@ -1,5 +1,5 @@
 require "spec"
-require "../../../operators/ltnp_operator.cr"
+require "../../operators/ltnp_operator.cr"
 
 describe LtnpOperator do
   sut = LtnpOperator.new File.read("./spec/input/ltnp_example.txt")
