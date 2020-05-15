@@ -27,7 +27,7 @@ class LtnpRecord
     ]
   end
 
-  def out_s
+  def output_s
     "Port: %s, Process: %s, Process ID: %s" % [self.port, self.p_name, self.pid]
   end
 
