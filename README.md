@@ -13,6 +13,9 @@ Show help menu.
 ### -c PORT, --check-port=PORT
 Get the name and process ID of the process running on a given port
 
+### -p PNAME, --find-process=PNAME
+Find the port and ID of a process by name
+
 ### -k PORT, --kill-port=PORT
 Check the process running on a given port with the option to kill it if you'd like.
 
