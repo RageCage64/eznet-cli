@@ -3,7 +3,7 @@ require "../records/ltnp_record"
 
 class LtnpOperator
   def initialize(ltnp_data = "")
-    if ltnp_data.nil?
+    if ltnp_data.empty?
       ltnp_data = CommandRunner.run_ltnp
     end
     records = ltnp_data.each_line
