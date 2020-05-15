@@ -1,5 +1,5 @@
 require "option_parser"
-require "./ltnp/ltnp_operator"
+require "./operators/ltnp_operator"
 
 OptionParser.parse do |parser|
   parser.banner = "Welcome to eznetstat!"
