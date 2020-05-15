@@ -1,8 +1,8 @@
 module CommandRunner
-  def self.run_ltnp : LtnpOperator
+  def self.run_ltnp : String
     io = IO::Memory.new
     Process.run("netstat -ltnp", shell: true, output: io)
-    LtnpOperator.new io.to_s
+    io.to_s
   end
 
   def self.run_kill(pid : String) : String
