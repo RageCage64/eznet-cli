@@ -5,7 +5,7 @@ authors:
   - BraydonKains <kainsbraydon@gmail.com>
 
 targets:
-  eznet:
+  main:
     eznet: ./eznet.cr
 
 crystal: 0.34.0
