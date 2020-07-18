@@ -6,7 +6,7 @@ authors:
 
 targets:
   main:
-    eznet: ./eznet.cr
+    main: ./eznet.cr
 
 crystal: 0.34.0
 
